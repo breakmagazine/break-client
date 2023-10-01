@@ -15,7 +15,22 @@
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "apps/*", "packages/*"]
+    }
   },
+  "references": [
+    {
+      "path": "apps/breakmag"
+    },
+    {
+      "path": "apps/admin"
+    },
+    {
+      "path": "packages/ui"
+    }
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,6 +1,8 @@
 {
   "private": true,
   "scripts": {
+    "breakmag": "turbo dev --filter breakmag",
+    "admin": "turbo dev --filter admin",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -13,9 +15,16 @@
     "turbo": "latest"
   },
   "name": "break-client",
-  "packageManager": "yarn@1.22.19",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "yarn@3.6.3",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ]
+  },
+  "dependencies": {
+    "next-transpile-modules": "^10.0.1",
+    "pnp-webpack-plugin": "^1.7.0",
+    "react-hook-form": "^7.46.2"
+  }
 }
